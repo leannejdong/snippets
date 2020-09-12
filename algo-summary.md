@@ -23,4 +23,4 @@ Find a way to place n queens on an nxn chessboard so that no two queens are atta
 
 ## Graph algorithms
 
-[Dijkstra's SSSP](https://gcc.godbolt.org/z/7W5h5c)
+[Dijkstra's SSSP](https://gcc.godbolt.org/z/GP9xMa)
