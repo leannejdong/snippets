@@ -20,3 +20,7 @@ Find a way to place n queens on an nxn chessboard so that no two queens are atta
 ## Hash Tables
 
 (https://gcc.godbolt.org/z/PqP1ro)
+
+## Graph algorithms
+
+[Dijkstra's SSSP](https://gcc.godbolt.org/z/7W5h5c)
