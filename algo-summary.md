@@ -26,5 +26,6 @@ Find a way to place n queens on an nxn chessboard so that no two queens are atta
 [Dijkstra's SSSP](https://gcc.godbolt.org/z/GP9xMa)
 
 ###  Path finding
-[A* version1](https://godbolt.org/z/fEffWc)
-[A* better](https://godbolt.org/z/zW3z4q)
+
+* [A* version1](https://godbolt.org/z/fEffWc)
+* [A* better](https://godbolt.org/z/zW3z4q)
