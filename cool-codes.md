@@ -29,3 +29,12 @@ Find a way to place n queens on an nxn chessboard so that no two queens are atta
 
 * [A* version1](https://godbolt.org/z/fEffWc)
 * [A* better](https://godbolt.org/z/zW3z4q)
+
+# Useful Snippats
+
+## Finite Difference with functor
+
+* [simple](https://gcc.godbolt.org/z/E9WEbv)
+* [template](https://gcc.godbolt.org/z/dx9KvE)
+* [template (multi)](https://gcc.godbolt.org/z/4a18EP)
+* [template (type_traits)](https://gcc.godbolt.org/z/xPTKj6)
