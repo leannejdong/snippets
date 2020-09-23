@@ -34,7 +34,7 @@ Find a way to place n queens on an nxn chessboard so that no two queens are atta
 
 BB is an optimization algorithm converts a maximization into a minimization problem.
 
-* [Travelling Sale Man](https://godbolt.org/z/h7rEdn)
+* [Travelling Sale Man](https://godbolt.org/z/9h95c4)
 
 # Useful Snippets
 
