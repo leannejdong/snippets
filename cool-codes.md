@@ -30,7 +30,13 @@ Find a way to place n queens on an nxn chessboard so that no two queens are atta
 * [A* version1](https://godbolt.org/z/fEffWc)
 * [A* better](https://godbolt.org/z/zW3z4q)
 
-# Useful Snippats
+### Branch and Bound 
+
+BB is an optimization algorithm converts a maximization into a minimization problem.
+
+* [Travelling Sale Man](https://godbolt.org/z/h7rEdn)
+
+# Useful Snippets
 
 ## Finite Difference with functor
 
