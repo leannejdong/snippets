@@ -6,8 +6,9 @@
 
 ## Dynamic Programming
 
-Dynamic Programming is similar to backtracking except that we stop making redundant computations (i.e. Memoization)
+Dynamic Programming is similar to backtracking except that we stop making redundant computations (i.e. Memoization. Calculate the answer to each subproblem only  once)
 
+[climb stairs](https://gcc.godbolt.org/z/3orrYE)
 [Knapsack](https://godbolt.org/z/7hWj3d)
 
 ## Backtracking
@@ -15,6 +16,7 @@ Dynamic Programming is similar to backtracking except that we stop making redund
 The algorithm begins with anempty solution and extends the solution step by step. The search recursively goes through all different ways 
 how a solution can be constructed.
 [climb-stairs](https://gcc.godbolt.org/z/fdcdzf)
+
 (https://gcc.godbolt.org/z/aK8jzT)
 
 ## NQueens
