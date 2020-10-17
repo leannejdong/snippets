@@ -46,6 +46,10 @@ BB is an optimization algorithm converts a maximization into a minimization prob
 
 # Useful Snippets
 
+* [bitmap](https://gcc.godbolt.org/z/Pbfqzq)
+
+* [bitset]( https://gcc.godbolt.org/z/5Mv8zo)
+
 ## Finite Difference with functor
 
 * [simple](https://gcc.godbolt.org/z/E9WEbv)
