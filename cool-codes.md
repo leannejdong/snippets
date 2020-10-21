@@ -63,3 +63,10 @@ BB is an optimization algorithm converts a maximization into a minimization prob
 * [higer order function](https://godbolt.org/z/KKTeTT)
 * [function object](https://godbolt.org/z/P65rEv)
 * [when do u still need macros?](https://godbolt.org/z/M4Kaf3)
+* Should you use raw or unique ptr?
+
+[Example1](https://godbolt.org/z/qfo6dj)
+
+[Example2](https://godbolt.org/z/fGWz9a)
+
+[Example3](https://godbolt.org/z/Pqshfj)
