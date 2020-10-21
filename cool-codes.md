@@ -57,7 +57,7 @@ BB is an optimization algorithm converts a maximization into a minimization prob
 * [template (multi)](https://gcc.godbolt.org/z/4a18EP)
 * [template (type_traits)](https://gcc.godbolt.org/z/xPTKj6)
 
-# C++ general
+## C++ general
 
 * [padding and alignment](https://gcc.godbolt.org/z/ndscGM)
 * [higer order function](https://godbolt.org/z/KKTeTT)
