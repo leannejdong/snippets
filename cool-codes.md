@@ -65,8 +65,8 @@ BB is an optimization algorithm converts a maximization into a minimization prob
 * [when do u still need macros?](https://godbolt.org/z/M4Kaf3)
 * Should you use raw or unique ptr?
 
-[Example1](https://godbolt.org/z/qfo6dj)
+  * [Example1](https://godbolt.org/z/qfo6dj)
 
-[Example2](https://godbolt.org/z/fGWz9a)
+  * [Example2](https://godbolt.org/z/fGWz9a)
 
-[Example3](https://godbolt.org/z/Pqshfj)
+  * [Example3](https://godbolt.org/z/Pqshfj)
