@@ -62,3 +62,4 @@ BB is an optimization algorithm converts a maximization into a minimization prob
 * [padding and alignment](https://gcc.godbolt.org/z/ndscGM)
 * [higer order function](https://godbolt.org/z/KKTeTT)
 * [function object](https://godbolt.org/z/P65rEv)
+* [when do u still need macros?](https://godbolt.org/z/M4Kaf3)
