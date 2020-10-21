@@ -1,1 +1,1 @@
-Just some random codes snippats I found useful
+Just some random codes snippets I found useful. (All in compiler explorer)
