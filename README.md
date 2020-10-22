@@ -71,3 +71,5 @@ BB is an optimization algorithm converts a maximization into a minimization prob
   * [Example2](https://godbolt.org/z/fGWz9a)
 
   * [Example3](https://godbolt.org/z/Pqshfj)
+
+* [non-owning pointer](https://godbolt.org/z/95s4Kq)
