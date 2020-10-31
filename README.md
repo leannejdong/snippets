@@ -45,6 +45,11 @@ BB is an optimization algorithm converts a maximization into a minimization prob
 * [Test of Travelling Sale Man](https://godbolt.org/z/dq5vq7)
 * [TSP via unique ptr](https://godbolt.org/z/nE5anv)
 
+### Brute-force branch and bound
+
+* [dynamic programming solution with O(n * 2^n)]
+   (https://gcc.godbolt.org/z/hxzx9h)
+
 # Useful Snippets
 
 * [bitmap](https://gcc.godbolt.org/z/Pbfqzq)
