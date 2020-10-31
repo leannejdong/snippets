@@ -1,12 +1,14 @@
-# Algorithms
+# A list of snippets cope with some frequent mistakes I made (Self-education only)
 
-##  Path finding
+## Algorithms and Strategies
+
+###  Path finding
 
 * [A* version1](https://godbolt.org/z/fEffWc)
 * [A* better](https://godbolt.org/z/zW3z4q)
 * [DFS](https://godbolt.org/z/ev9aKf)
 
-## Dynamic Programming
+### Dynamic Programming
 
 Dynamic Programming is similar to backtracking except that we stop making redundant computations (i.e. Memoization. Calculate the answer to each subproblem only  once)
 
@@ -14,7 +16,7 @@ Dynamic Programming is similar to backtracking except that we stop making redund
 * [Knapsack](https://godbolt.org/z/7hWj3d)
 * [Fibonacci-DP-vs-iteration](https://gcc.godbolt.org/z/67KPvf)
 
-## Backtracking
+### Backtracking
 
 The algorithm begins with anempty solution and extends the solution step by step. The search recursively goes through all different ways 
 how a solution can be constructed.
@@ -22,15 +24,14 @@ how a solution can be constructed.
 
 (https://gcc.godbolt.org/z/aK8jzT)
 
-## NQueens
+### NQueens
 
 Find a way to place n queens on an nxn chessboard so that no two queens are attacking each other.
 
 [NQueens by recursion](https://gcc.godbolt.org/z/PqP1ro)
 
-## Hash Tables
 
-## Graph algorithms
+### Graph algorithms
 
 [Dijkstra's SSSP](https://gcc.godbolt.org/z/GP9xMa)
 
@@ -46,7 +47,7 @@ BB is an optimization algorithm converts a maximization into a minimization prob
 
 * [dynamic programming solution with O(n*2^n)](https://gcc.godbolt.org/z/hxzx9h)
 
-# Useful Snippets
+## Data structures
 
 * [bitmap](https://gcc.godbolt.org/z/Pbfqzq)
 
