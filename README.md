@@ -47,8 +47,7 @@ BB is an optimization algorithm converts a maximization into a minimization prob
 
 ### Brute-force branch and bound
 
-* [dynamic programming solution with O(n * 2^n)]
-   (https://gcc.godbolt.org/z/hxzx9h)
+* [dynamic programming solution with O(n*2^n)](https://gcc.godbolt.org/z/hxzx9h)
 
 # Useful Snippets
 
