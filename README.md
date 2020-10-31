@@ -1,8 +1,10 @@
 # Algorithms
 
-## DFS
+##  Path finding
 
-(https://godbolt.org/z/ev9aKf)
+* [A* version1](https://godbolt.org/z/fEffWc)
+* [A* better](https://godbolt.org/z/zW3z4q)
+* [DFS](https://godbolt.org/z/ev9aKf)
 
 ## Dynamic Programming
 
@@ -31,11 +33,6 @@ Find a way to place n queens on an nxn chessboard so that no two queens are atta
 ## Graph algorithms
 
 [Dijkstra's SSSP](https://gcc.godbolt.org/z/GP9xMa)
-
-###  Path finding
-
-* [A* version1](https://godbolt.org/z/fEffWc)
-* [A* better](https://godbolt.org/z/zW3z4q)
 
 ### Branch and Bound 
 
