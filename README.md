@@ -8,9 +8,9 @@
 
 Dynamic Programming is similar to backtracking except that we stop making redundant computations (i.e. Memoization. Calculate the answer to each subproblem only  once)
 
-[climb stairs](https://gcc.godbolt.org/z/3orrYE)
-[Knapsack](https://godbolt.org/z/7hWj3d)
-[Fobonacci-DP-vs-iteration](https://gcc.godbolt.org/z/67KPvf)
+* [climb stairs](https://gcc.godbolt.org/z/3orrYE)
+* [Knapsack](https://godbolt.org/z/7hWj3d)
+* [Fibonacci-DP-vs-iteration](https://gcc.godbolt.org/z/67KPvf)
 
 ## Backtracking
 
@@ -23,11 +23,10 @@ how a solution can be constructed.
 ## NQueens
 
 Find a way to place n queens on an nxn chessboard so that no two queens are attacking each other.
+
 [NQueens by recursion](https://gcc.godbolt.org/z/PqP1ro)
 
 ## Hash Tables
-
-(https://gcc.godbolt.org/z/PqP1ro)
 
 ## Graph algorithms
 
