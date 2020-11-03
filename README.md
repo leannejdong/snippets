@@ -1,4 +1,4 @@
-# A list of snippets cope with some frequent mistakes I made (Self-education only)
+# A list of useful snippets (Personal-use only)
 
 ## Algorithms and Strategies
 
