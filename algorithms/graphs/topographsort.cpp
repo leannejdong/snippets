@@ -12,8 +12,6 @@ class Graph {
 	// No. of vertices' 
 	int V; 
 
-	// Pointer to an array containing 
-	// adjacency listsList 
 	vector<list<int>> adj; 
 
 public: 
@@ -92,7 +90,6 @@ void Graph::topologicalSort()
 		// of dequeued node u and 
 		// decrease their in-degree 
 		// by 1 
-        int s;
 		for (int s : adj[u]) 
 
 			// If in-degree becomes zero, 

@@ -35,6 +35,8 @@ Find a way to place n queens on an nxn chessboard so that no two queens are atta
 
 [Dijkstra's SSSP](https://gcc.godbolt.org/z/GP9xMa)
 
+[topological sort using indegrees](https://gcc.godbolt.org/z/53r1vn)
+
 ### Branch and Bound 
 
 BB is an optimization algorithm converts a maximization into a minimization problem.
