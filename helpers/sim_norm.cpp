@@ -2,25 +2,26 @@
 #include <iostream>
 
 
-std::random_device rd{};
-std::mt19937 gen{rd()};
-std::normal_distribution<> nd;
+    double GetNormDistrDouble(std::mt19937 &gen)
+    {
+        double val = 1;
+        std::normal_distribution<> nd;
+        val = nd(gen);
+        do { val = nd(gen);}
+        while(val < 1.0 || val > 10.0);
 
-float GetNormDistrFloat()
-{
-    float val = -1;
-    do { val = nd(gen); } 
-    while(val < 0.0f || val > 1.0f);
-
-    return val;
-}
+        return val;
+    }
 
 
 int main()
 {
-    std::cerr << "result: " << GetNormDistrFloat() << "\n";
-    std::cerr << "result: " << GetNormDistrFloat() << "\n";
-    std::cerr << "result: " << GetNormDistrFloat() << "\n";
+    int seed = 10;
+    std::mt19937 gen(seed);
 
-    GetNormDistrFloat();
+    std::cerr << "result: " << GetNormDistrDouble(gen) << "\n";
+    std::cerr << "result: " << GetNormDistrDouble(gen) << "\n";
+    std::cerr << "result: " << GetNormDistrDouble(gen) << "\n";
+
+    GetNormDistrDouble(gen);
 }
