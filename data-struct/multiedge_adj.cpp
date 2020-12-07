@@ -1,32 +1,67 @@
-// print the number of (parallel) edges between vertices
-#include <boost/graph/adjacency_list.hpp>
 #include <iostream>
-#include <iterator>
+#include <vector>
+using std::vector;
+using std::cerr;
 
-using namespace boost;
+struct adj_Mat {
+    vector<int> elements;
+    int n_cols;
 
-template <typename Graph>
-void displayMatrix(Graph const &inc) 
-{
-    for(std::size_t i = 0; i != num_vertices(inc); i++)
+    adj_Mat(int n_rows, int n_cols)
+    : elements(n_cols*n_rows),
+      n_cols(n_cols)
+      {}
+    int &operator()(int i, int j)
     {
-        for(std::size_t j = 0; j != num_vertices(inc); j++)
+        return elements[i*n_cols + j];
+    }
+};
+
+
+
+void addEdge(adj_Mat &adj, int u, int v)
+{
+    cerr << "In addEdge(u=" << u << ", v=" << v << ")\n";
+    cerr << "1: adj(u,v) == " << adj(u,v) << "\n";
+    adj(u, v) += 1;
+    cerr << "2: adj(u,v) == " << adj(u,v) << "\n";
+    cerr << "3: adj(v,u) == " << adj(v,u) << "\n";
+    adj(v, u) += 1; 
+    cerr << "4: adj(v,u) == " << adj(v,u) << "\n";
+    cerr << "Leaving addEdge(u=" << u << ", v=" << v << ")\n";
+}
+
+void print_graph(adj_Mat mat, int n_rows, int n_cols)
+{
+    for(int i = 0; i < n_rows; ++i)
+    {
+        for (int j = 0; j < n_cols; ++j)
         {
-            auto parallel_edges = edge_range(i, j, inc);
-            std::cout << std::distance(parallel_edges.first, parallel_edges.second) << " ";
+            std::cerr << " " << mat(i, j);
         }
-        std::cout << "\n";
+        std::cerr << " \n";
     }
 }
 
+
+
 int main()
 {
-    adjacency_list<multisetS, vecS, undirectedS> inc;
-    add_edge(0, 1, inc);
-    add_edge(0, 2, inc);
-    add_edge(0, 2, inc);
-    add_edge(1, 2, inc);
-    displayMatrix(inc);
-}
+    int n_rows = 3;
+    int n_cols = 3;
+    int ed_no = 0;
+    adj_Mat m2(n_rows, n_cols);
+    addEdge(m2, 0, 1);
+    cerr << "After 1st call to addEdge, the graph is:\n";
+    print_graph(m2, n_rows, n_cols);
+    addEdge(m2, 0, 2);
+    cerr << "After 2nd call to addEdge, the graph is:\n";
+    print_graph(m2, n_rows, n_cols);
+    addEdge(m2, 2, 0);
+    cerr << "After 3rd call to addEdge, the graph is:\n";
+    print_graph(m2, n_rows, n_cols);
+    addEdge(m2, 1, 2);
+    print_graph(m2, n_rows, n_cols);
 
+}
 
