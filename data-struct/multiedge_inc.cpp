@@ -43,13 +43,13 @@ void print_graph(inc_Mat mat, int n_rows, int n_cols)
 int main()
 {
     int n_rows = 3;
-    int n_cols = 5;
+    int n_cols = 4;
     int ed_no = 0;
     inc_Mat m2(n_rows, n_cols);
     addEdge(m2, 0, 1, ed_no);
     addEdge(m2, 0, 2, ed_no);
     addEdge(m2, 0, 2, ed_no);
-    addEdge(m2, 0, 2, ed_no);
+//    addEdge(m2, 0, 2, ed_no);
     addEdge(m2, 1, 2, ed_no);
     print_graph(m2, n_rows, n_cols);
 
