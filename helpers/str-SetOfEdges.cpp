@@ -20,7 +20,6 @@ using std::istringstream;
 static set<pair<int,int>> parseGraph(const string &graph_string)
 {
     std::istringstream input_stream(graph_string);
-    vector<int> nodes;
     int node_P, node_Q;
     set<pair<int, int>> S;
     if (!input_stream) {
