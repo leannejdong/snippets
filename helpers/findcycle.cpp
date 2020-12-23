@@ -101,9 +101,8 @@ int main() {
                                          {2, 4}, {2, 5}, {4, 5}, {5, 6}, {5, 7}};
    Graph g(v, e);
    bool res;
-
-    res = g.hascycle();
-    std::cout << res << "\n";
-   if(res) std::cout << " has cycle " << "\n";
-   else std::cout << " no cycle " << "\n";
+   res = g.hascycle();
+   std::cout << res << "\n";
+   if(res) std::cerr << " has cycle " << "\n";
+   else std::cerr << " no cycle " << "\n";
 }
