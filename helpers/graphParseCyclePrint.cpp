@@ -19,29 +19,7 @@ using std::stack;
 using std::make_pair;
 using std::ranges::sort;
 using std::array;
-constexpr int N = 100;
-
-void printVecPair (vector<pair<int, int>> &V)
-{
-    for(auto &v : V)
-    {
-        std::cerr <<  v.first << " " << v.second << "\n";
-    }
-    std::cerr << "End of Print " << "\n";
-
-}
-
-
-template <typename T>
-void printVec(T V)
-{
-    for (auto &v : V)
-    {
-        std::cerr << v << "\n";
-    }
-    std::cerr << "End of Print " << "\n";
-
-}
+constexpr int N = 1000;
 
 static vector<int> StrToVecInts(const string &graph_string)
 {
@@ -73,14 +51,35 @@ static vector<pair<int,int>> parseGraph(const string &graph_string)
     return V;
 }
 
-struct Graph {
-  Graph(std::vector<int> &v, std::vector<std::pair<int, int>> &e)
-      : v_(v), e_(e) {}
-  void PrintGraph();
-  std::vector<int> v_;
-  std::vector<std::pair<int, int>> e_;
+class Graph
+{
+	//std::vector<std::vector<int>> vertices;
+	std::vector<int> parents;
+    std::vector<int> v_;
+    std::vector<std::pair<int, int>> e_;
+	bool cycle_found = false;
 
-static vector<int> findNeighbors(int node_id, const vector<pair<int,int>> &edges)
+public:
+
+    Graph(std::vector<int> &v, std::vector<std::pair<int, int>> &e);
+
+
+
+	static vector<int> findNeighbors(int node_id, const vector<pair<int,int>> &edges);
+	bool has_cycle() const;
+	bool has_vertex(int index) const;
+	void compute_cycles();
+	void print_cycle(int first_vertex, int last_vertex) const;
+
+
+private:
+	void dfs_compute_cycle(std::vector<bool>& visited, int current_vertex);
+};
+
+Graph::Graph(std::vector<int> &v, std::vector<std::pair<int, int>> &e)
+    : parents(v_.size(), -1), v_(v), e_(e) {}
+
+vector<int> Graph::findNeighbors(int node_id, const vector<pair<int,int>> &edges)
 {
     vector<int> neighbors;
     for (auto u : edges)
@@ -94,38 +93,98 @@ static vector<int> findNeighbors(int node_id, const vector<pair<int,int>> &edges
     }
     return neighbors;
 }
-void printCycles(int v, int u, vector<int> &par)
+
+bool Graph::has_cycle() const
 {
-    std::cerr << "Found cycle" << "\n";
-    while(u != v)
-    {
-        std::cerr << u << " -> " << " ";
-        u = par[u];
-    }
-    std::cerr << v << "\n";
-}
-bool dfs_cycle(int u, vector<int> &color, vector<int> &par)
-{
-     vector<int> neighbors;
-    neighbors = findNeighbors(u, e_);
-    color[u] = 1;
-    for (auto v : neighbors)
-    {
-        if (color[v] == 0)
-        {
-            par[v] = u;
-            dfs_cycle(v, color, par);
-        } else if (color[v] == 1 && v != par[u]) {
-            printCycles(v, u, par);
-            break;
-        }
-    }
-    color[u] = 2;
-    return false;
+	return cycle_found;
 }
 
-};
-static void test3()
+bool Graph::has_vertex(int index) const
+{
+	return index >= 0 && index < (int)e_.size();
+}
+
+
+void Graph::compute_cycles()
+{
+	auto const vertices_count = e_.size();
+   // std::cerr << vertices_count << "\n";
+	std::vector<bool> visited(vertices_count, false);
+
+	for (size_t i = 0; i < vertices_count; ++i)
+	{
+		if (!visited[i]) dfs_compute_cycle(visited, i);
+	}
+}
+
+void Graph::dfs_compute_cycle(std::vector<bool>& visited, int current_vertex)
+{
+	assert(has_vertex(current_vertex));
+
+	visited[current_vertex] = true;
+      // mark the current vertex as visited
+    vector<int> neighbors;
+    neighbors = findNeighbors(current_vertex, e_);
+    // go through each element of the neighbor
+	for (auto v : neighbors)
+	{
+        //std::cerr << neighbors.size() << "\n";
+        //std::cout << v << "\n";
+        // check to see if the neighbor of the current vertex is visited
+		if (!visited[v])
+		{
+            // the neighbor of the current vertex is not visited
+
+			parents[v] = current_vertex;
+              // set the parent of the neighbor of the current vertex to the current vertex
+
+			dfs_compute_cycle(visited, v);
+              // recursively compute the cycle with the neighbor of the current vertex
+		}
+		else 
+        {
+            // the neighbor of the current vertex is visited
+            if (v != parents[current_vertex] && current_vertex > v)
+            {
+                // The neighbor of the current vertex is not the parent of the current vertex.
+                // The current vertex has a higher index than the neighbor.
+
+                cycle_found = true;
+                // set cycle_found to true
+
+                std::cout << "cycle found: ";
+
+                print_cycle(current_vertex, v);
+                // print out the cycle using the current vertex and the neighbor of the current
+                // vertex
+
+                std::cout << "\n";
+            }
+        }
+	}
+}
+
+void Graph::print_cycle(int first_vertex, int last_vertex) const
+{
+	assert(has_vertex(first_vertex));
+	assert(has_vertex(last_vertex));
+
+	if (first_vertex < last_vertex)
+	{
+		print_cycle(last_vertex, first_vertex);
+		return;
+	}
+
+	std::cout << first_vertex;
+	if (first_vertex != last_vertex)
+	{
+		std::cout << " -> ";
+		print_cycle(parents[first_vertex], last_vertex);
+	}
+}
+
+
+int main()
 {
     string graph_string =
       "1\n"     // node number
@@ -155,33 +214,10 @@ static void test3()
      sort(v);
      auto last = std::unique(begin(v), end(v));
      v.erase(last, v.end());
-  //   printVec(v);
 
-    vector<pair<int,int>> expected_e = {
-       {1,2},
-       {1,3},
-       {1,4},
-       {2,3},
-       {2,4},
-       {2,5},
-       {4,5},
-       {5,6},
-       {5,7}
-    };
-    vector<int> expected_v = { 1, 2, 3, 4, 5, 6, 7 };
-    printVecPair(e);
-    assert(e == expected_e);
 
     Graph g(v, e);
-    vector<int> color(N);
-    vector<int> par(N);
 
-    g.dfs_cycle(1, color, par);
+	g.compute_cycles();
 }
-
-
-int main()
-{
-    test3();
-}
-
+// https://godbolt.org/z/h6PaPo
