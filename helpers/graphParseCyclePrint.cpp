@@ -53,7 +53,6 @@ static vector<pair<int,int>> parseGraph(const string &graph_string)
 
 class Graph
 {
-	//std::vector<std::vector<int>> vertices;
 	std::vector<int> parents;
     std::vector<int> v_;
     std::vector<std::pair<int, int>> e_;
