@@ -1,5 +1,13 @@
 # A list of useful snippets (Personal-use only)
 
+The material in this repo are for 
+
+* revising basics
+
+* Trying new(mainly C++ 17, 20) features
+
+* some auxiliary prototypes for various work project
+
 ## Algorithms and Strategies
 
 ###  Path finding
