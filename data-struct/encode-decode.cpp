@@ -68,7 +68,7 @@ private:
     }
 
     void writeBool(string& buf, bool val) {
-        buf.append(val ? "1000" : "0000"); // alignment!!!!
+        buf.append(val ? "1000" : "0000"); 
     }
 
     bool readBool(const string& str, int& pos) {
