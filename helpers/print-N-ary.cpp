@@ -8,7 +8,7 @@ using std::string;
 // structure of A node of N-ary tree 
 struct Node { 
    string key; 
-   vector<Node> children;  // An array of pointers for N children 
+   vector<Node> children;  
 };
 
 
