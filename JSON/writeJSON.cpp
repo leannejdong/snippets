@@ -28,3 +28,4 @@ int main()
    cerr.width(4);
    cerr << j<<"\n";
 }
+//g++ -std=c++2a -Wall -Wextra -Wpedantic -Werror -fsanitize=address -D_GLIBCXX_DEBUG  -IJSON  JSON/writeJSON.cpp   -o JSON/writeJSON
