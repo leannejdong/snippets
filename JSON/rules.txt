@@ -1,0 +1,68 @@
+Before we start manipulating JSON objects and existing codebase.
+One needs to make sure the problem is defined. In particular,
+1. Think about what our tree data structure like
+2. Define rules
+3. Come up with an example
+
+In our case, observe from a schema (Monk3)
+[
+  {
+    "false": {
+      "complexity": 0.00800000037997961,
+      "loss": 0.24909746646881104,
+      "name": "class",
+      "prediction": 0
+    },
+    "feature": 3,
+    "name": "a4",
+    "reference": 2,
+    "relation": "==",
+    "true": {
+      "complexity": 0.00800000037997961,
+      "loss": 0.23826715350151062,
+      "name": "class",
+      "prediction": 1
+    }
+  }
+]
+
+One needs to define input, output and rules.
+Input: Dtree data
+Output: Dtree JSON schema/file
+Rule: 
+1. Each tree node is represented by a JSON object
+2. Every JSON object that corresponds to a node in the tree has an 'ref' number.3. The rule of the tree is a single dictionary object. The non-root node is of array type.
+There are two types of nodes: internal and terminal.
+Internal nodes contain a binary discriminating condition and have the following attributes:
+    • "feature" is an integer indicating the index (starting from 0) of the feature considered when making the discrimination
+    • "name" is the column label associated with the feature considered when making the discrimination
+    • "reference" is a dynamically typed value used as a point of comparison for the feature considered
+    • "relation" is a string representing a binary relational operator that compares a feature to the reference value
+    • "true" is a node representing the subtree used to further classify a sample that evaluates to true when making the discrimination
+    • "false" is a node representing the other subtree used when a sample evaluates to false
+Terminal nodes contain a boolean prediction and have the following attributes:
+    • "complexity" is a floating point value indicating the the complexity penalty a tree incurs by containing this terminal node
+    • "loss" is a floating point value indicating the misclassification penalty (on training data) a tree incurs by containing this node
+    • "name" is a string representing the property we are trying to classify
+    • "prediction" is an integer that is 0 if the property is predicted as false, and true otherwise
+
+Once you're familiar with the JSON library, here's the schema for the JSON object you are given:
+TREE ::= NODE
+NODE ::= INTERNAL || TERMINAL
+
+INTERNAL ::= {
+"feature" : integer
+"name" : string
+"reference" : any
+"relation" : string
+"true" : NODE
+"false" : NODE
+}
+
+TERMINAL ::= {
+"complexity" : float
+"loss" : float
+"name" : string
+"prediction" : integer
+}
+
