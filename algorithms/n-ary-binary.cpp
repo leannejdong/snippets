@@ -9,6 +9,7 @@ using std::cerr;
 using std::unique_ptr;
 using std::make_unique;
 
+
 // Definition for a Node.
 class Node {
 public:
@@ -24,23 +25,27 @@ public:
     }
 };
 
+
+string n_ary_to_str(Node *root);
+static unique_ptr<Node> copyNode(const Node &node);
+static vector<unique_ptr<Node>> copyNodes(const vector<unique_ptr<Node>> &originals);
+
 string n_ary_to_str(Node *root){
-   string ret = "";
-   if(root){
-      ret = ret + std::to_string(root->val);
-      if(root->children.size() > 0){
-         ret += "[";
-         for(unique_ptr<Node> &child : root->children){
-            ret += n_ary_to_str(child.get()) + ", ";
-         }
-         ret += "]";
-      }
-   }
-   return ret;
+    string ret = "";
+    if(root){
+        ret = ret + std::to_string(root->val);
+        if(root->children.size() > 0){
+            ret += "[";
+            for(unique_ptr<Node> &child : root->children){
+                ret += n_ary_to_str(child.get()) + ", ";
+            }
+            ret += "]";
+        }
+    }
+    return ret;
 }
 
 
-static vector<unique_ptr<Node>> copyNodes(const vector<unique_ptr<Node>> &originals);
 
 
 static unique_ptr<Node> copyNode(const Node &node)
@@ -63,23 +68,43 @@ static vector<unique_ptr<Node>> copyNodes(const vector<unique_ptr<Node>> &origin
 
 class Codec {
 public:
+    // encodes an n-ary tree to a binary tree
     unique_ptr<Node> encode(Node* root) {
-      if(!root) return nullptr;
-         auto node = make_unique<Node>(root->val, copyNodes(root->children));
-         cerr << "encode: root->children.size(): " << root->children.size() << "\n";
-         if(root->children.size()){
+        if(!root) return nullptr;
+        auto node = make_unique<Node>(root->val, copyNodes(root->children));
+        cerr << "encode: root->children.size(): " << root->children.size() << "\n";
+        if(root->children.size()){
             node->left = encode(root->children[0].get());
             cerr << "encode: node->left: " << node->left.get() << "\n";
-         }
-         Node* curr = node->left.get();
-         for(size_t i = 1; i < root->children.size(); i++){
+        }
+        Node* curr = node->left.get();
+        for(size_t i = 1; i < root->children.size(); i++){
             curr->right = encode(root->children[i].get());
             curr = curr->right.get();
-         }
+        }
 
-         cerr << "encode: returning node->left: " << node->left.get() << "\n";
-         return node;
-      }
+        cerr << "encode: returning node->left: " << node->left.get() << "\n";
+        return node;
+    }
+
+    // Decodes a binary tree to n-ary tree;
+    unique_ptr<Node> decode(Node* root)
+    {
+        if(!root) return nullptr;
+        if(!root->left.get())
+        {
+            return make_unique<Node>(root->val, copyNodes(root->children));
+        }
+        //auto curr = make_unique<Node>(root->left.get());
+        Node* curr = root->left.get();
+        while (curr)
+        {
+            root->children.push_back(decode(curr));
+            curr = curr->right.get();
+        }
+        return make_unique<Node>(root->val, copyNodes(root->children));
+    }
+
 
     // Encodes a tree to a single string.
     string serialize(Node* root) {
@@ -90,7 +115,6 @@ public:
     }
 
 
-    // Decodes your encoded data to tree.
     unique_ptr<Node> deserialize(string data) {
         int pos = 0;
         return deserializeHelper(data, pos);
@@ -128,14 +152,14 @@ private:
     }
 
     void writeBool(string& buf, bool val) {
-        buf.append(val ? "1000" : "0000"); // alignment!!!!
+        buf.append(val ? "1000" : "0000");
     }
 
     bool readBool(const string& str, int& pos) {
         char c = str[pos];
         pos += 4;
         return c == '1';
-    } 
+    }
 
     void writeInt(string& str, int& val) {
         const char* valStr = reinterpret_cast<const char*> (&val);
@@ -203,24 +227,30 @@ int main()
 {
     auto node5 = make_unique<Node>(5,vector<unique_ptr<Node>>());
     auto node6 = make_unique<Node>(6,vector<unique_ptr<Node>>());
-   vector<unique_ptr<Node>> node3_children;
-   node3_children.push_back(std::move(node5));
-   node3_children.push_back(std::move(node6));
-   unique_ptr<Node> node3 = make_unique<Node>(3,std::move(node3_children));
-   auto node2 = make_unique<Node>(2,vector<unique_ptr<Node>>());
-   auto node4 = make_unique<Node>(4,vector<unique_ptr<Node>>());
+    vector<unique_ptr<Node>> node3_children;
+    node3_children.push_back(std::move(node5));
+    node3_children.push_back(std::move(node6));
+    unique_ptr<Node> node3 = make_unique<Node>(3,std::move(node3_children));
+    auto node2 = make_unique<Node>(2,vector<unique_ptr<Node>>());
+    auto node4 = make_unique<Node>(4,vector<unique_ptr<Node>>());
     vector<unique_ptr<Node>> node1_children;
     node1_children.push_back(std::move(node3));
     node1_children.push_back(std::move(node2));
     node1_children.push_back(std::move(node4));
-   unique_ptr<Node> node1 = make_unique<Node>(1,std::move(node1_children));
+    unique_ptr<Node> node1 = make_unique<Node>(1,std::move(node1_children));
 
     Codec codec;
     std::cout << "Given Tree: " << n_ary_to_str(node1.get()) << "\n";
     unique_ptr<Node> root = codec.encode(node1.get());
     std::cout << "root->left: " << root->left.get() << "\n";
     std::cout << "root->right: " << root->right.get() << "\n";
-    inord(root.get()); 
+    inord(root.get());
+    std::cout << "\n";
+
+    unique_ptr<Node> root1 = codec.decode(root.get());
+    std::cout << "root->left: " << root1->left.get() << "\n";
+    std::cout << "root->right: " << root1->right.get() << "\n";
+    inord(root1.get());
     std::cout << "\n";
 }
 
