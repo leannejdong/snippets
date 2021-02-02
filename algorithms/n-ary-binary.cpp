@@ -246,12 +246,16 @@ int main()
     std::cout << "root->right: " << root->right.get() << "\n";
     inord(root.get());
     std::cout << "\n";
+    
+    string output = codec.serialize(root.get());
+    std::cout << "output from serialization: "<< output << "\n";
 
     unique_ptr<Node> root1 = codec.decode(root.get());
     std::cout << "root->left: " << root1->left.get() << "\n";
     std::cout << "root->right: " << root1->right.get() << "\n";
     inord(root1.get());
     std::cout << "\n";
+
 }
 
 
