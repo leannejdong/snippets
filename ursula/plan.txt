@@ -1,0 +1,20 @@
+Deadline(April): Linearize the nonlinear system
+
+Steps:
+1. Linearize the system, See
+Quadratic equations for hydraulic (eq2.10 Liu's thesis)
+Hydraulic case (2.9)
+2. Solve the equation system; 
+Test the solver
+
+Misc:
+Consider now nonlinear case (Diode)
+Flow in electrical sense is current
+Flow in hydraulic is massflow
+Efforts is a driving force
+
+
+Tasks for Students:
+Programming blocks in C++
+
+
