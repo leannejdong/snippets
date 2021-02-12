@@ -1,0 +1,7 @@
+{
+  "data": "rain",
+  "children": [
+    {"data":"construction", "children": [{"data": "traffic"}]},
+    {"data":"rush hour", "children": [{"data": "no traffic"}]}
+    ]
+}
