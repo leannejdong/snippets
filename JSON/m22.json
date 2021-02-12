@@ -1,0 +1,176 @@
+[
+    {
+        "false": {
+            "false": {
+                "complexity": 0.00800000037997961,
+                "loss": 0.07653909921646118,
+                "name": "class",
+                "prediction": 0
+            },
+            "feature": 5,
+            "name": "a6",
+            "reference": 2,
+            "relation": ">=",
+            "true": {
+                "false": {
+                    "false": {
+                        "complexity": 0.00800000037997961,
+                        "loss": 0.029950082302093506,
+                        "name": "class",
+                        "prediction": 0
+                    },
+                    "feature": 1,
+                    "name": "a2",
+                    "reference": 2,
+                    "relation": ">=",
+                    "true": {
+                        "false": {
+                            "complexity": 0.00800000037997961,
+                            "loss": 0.011647254228591919,
+                            "name": "class",
+                            "prediction": 0
+                        },
+                        "feature": 2,
+                        "name": "a3",
+                        "reference": 2,
+                        "relation": ">=",
+                        "true": {
+                            "false": {
+                                "complexity": 0.00800000037997961,
+                                "loss": 0.0,
+                                "name": "class",
+                                "prediction": 0
+                            },
+                            "feature": 4,
+                            "name": "a5",
+                            "reference": 2,
+                            "relation": ">=",
+                            "true": {
+                                "complexity": 0.00800000037997961,
+                                "loss": 0.0,
+                                "name": "class",
+                                "prediction": 1
+                            }
+                        }
+                    }
+                },
+                "feature": 3,
+                "name": "a4",
+                "reference": 2,
+                "relation": "==",
+                "true": {
+                    "false": {
+                        "false": {
+                            "complexity": 0.00800000037997961,
+                            "loss": 0.004991680383682251,
+                            "name": "class",
+                            "prediction": 0
+                        },
+                        "feature": 1,
+                        "name": "a2",
+                        "reference": 2,
+                        "relation": ">=",
+                        "true": {
+                            "false": {
+                                "complexity": 0.00800000037997961,
+                                "loss": 0.0,
+                                "name": "class",
+                                "prediction": 0
+                            },
+                            "feature": 2,
+                            "name": "a3",
+                            "reference": 2,
+                            "relation": ">=",
+                            "true": {
+                                "complexity": 0.00800000037997961,
+                                "loss": 0.0,
+                                "name": "class",
+                                "prediction": 1
+                            }
+                        }
+                    },
+                    "feature": 4,
+                    "name": "a5",
+                    "reference": 2,
+                    "relation": ">=",
+                    "true": {
+                        "complexity": 0.00800000037997961,
+                        "loss": 0.06655573844909668,
+                        "name": "class",
+                        "prediction": 1
+                    }
+                }
+            }
+        },
+        "feature": 0,
+        "name": "a1",
+        "reference": 1,
+        "relation": "==",
+        "true": {
+            "false": {
+                "complexity": 0.00800000037997961,
+                "loss": 0.024958401918411255,
+                "name": "class",
+                "prediction": 1
+            },
+            "feature": 2,
+            "name": "a3",
+            "reference": 2,
+            "relation": ">=",
+            "true": {
+                "false": {
+                    "false": {
+                        "complexity": 0.00800000037997961,
+                        "loss": 0.0,
+                        "name": "class",
+                        "prediction": 1
+                    },
+                    "feature": 1,
+                    "name": "a2",
+                    "reference": 2,
+                    "relation": ">=",
+                    "true": {
+                        "false": {
+                            "complexity": 0.00800000037997961,
+                            "loss": 0.0,
+                            "name": "class",
+                            "prediction": 1
+                        },
+                        "feature": 4,
+                        "name": "a5",
+                        "reference": 2,
+                        "relation": ">=",
+                        "true": {
+                            "false": {
+                                "complexity": 0.00800000037997961,
+                                "loss": 0.0,
+                                "name": "class",
+                                "prediction": 1
+                            },
+                            "feature": 5,
+                            "name": "a6",
+                            "reference": 2,
+                            "relation": ">=",
+                            "true": {
+                                "complexity": 0.00800000037997961,
+                                "loss": 0.0,
+                                "name": "class",
+                                "prediction": 0
+                            }
+                        }
+                    }
+                },
+                "feature": 3,
+                "name": "a4",
+                "reference": 2,
+                "relation": "==",
+                "true": {
+                    "complexity": 0.00800000037997961,
+                    "loss": 0.029950082302093506,
+                    "name": "class",
+                    "prediction": 0
+                }
+            }
+        }
+    }
+]
