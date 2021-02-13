@@ -12,6 +12,10 @@ int main()
 
     // read a JSON file
     std::ifstream i("m2.json");
+    if (!i) {
+        std::cerr << "Unable to open m2.json\n";
+        return EXIT_FAILURE;
+    }
     json j;
     i >> j;
 
