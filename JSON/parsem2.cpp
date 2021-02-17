@@ -42,7 +42,7 @@ auto restructure(const auto &inputs){
     nlohmann::json outputs;
     for(auto &input:inputs){
         nlohmann::json new_child;
-        for(auto &[key, value]:inputs.items()){
+        for(auto &[key, value]:input.items()){
             new_child["key"] = key;
             new_child["value"] = value;
         }
