@@ -69,14 +69,14 @@ auto convert(const auto &inputs){
 }
 
 int main(){
-     std::ifstream source("model.json");
+//    std::ifstream source("model.json");
 //    std::ifstream source("tic-tac-dat.json");
-//    std::ifstream source("m2.json");
-     auto inputs = nlohmann::json::parse(source);
-     std::ofstream os("n-ary-model.json");
+    std::ifstream source("m2.json");
+   auto inputs = nlohmann::json::parse(source);
+   // std::ofstream os("n-ary-model.json");
    // std::ofstream os("ttdo.json");
-   // std::ofstream os("m22.json");
-    auto outputs = convert(inputs);
+   std::ofstream os("m22.json");
+   auto outputs = convert(inputs);
     std::string inputs_str = inputs.dump(4);
     os << inputs_str << "\n";
    // std::cout << inputs.dump(4) << std::endl;

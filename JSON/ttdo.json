@@ -237,52 +237,27 @@
 {
     "children": [
         {
-            "key": "true",
-            "value": {
+            "false": {
                 "false": {
                     "false": {
-                        "false": {
-                            "complexity": 0.00800000037997961,
-                            "loss": 0.008350730873644352,
-                            "name": "Class",
-                            "prediction": 1
-                        },
-                        "feature": 3,
-                        "name": "middle-left-square",
-                        "reference": "o",
-                        "relation": "==",
-                        "true": {
-                            "false": {
-                                "complexity": 0.00800000037997961,
-                                "loss": 0.001043841359205544,
-                                "name": "Class",
-                                "prediction": 1
-                            },
-                            "feature": 6,
-                            "name": "bottom-left-square",
-                            "reference": "o",
-                            "relation": "==",
-                            "true": {
-                                "complexity": 0.00800000037997961,
-                                "loss": 0.0,
-                                "name": "Class",
-                                "prediction": 0
-                            }
-                        }
+                        "complexity": 0.00800000037997961,
+                        "loss": 0.008350730873644352,
+                        "name": "Class",
+                        "prediction": 1
                     },
-                    "feature": 1,
-                    "name": "top-middle-square",
+                    "feature": 3,
+                    "name": "middle-left-square",
                     "reference": "o",
                     "relation": "==",
                     "true": {
                         "false": {
                             "complexity": 0.00800000037997961,
-                            "loss": 0.004175365436822176,
+                            "loss": 0.001043841359205544,
                             "name": "Class",
                             "prediction": 1
                         },
-                        "feature": 2,
-                        "name": "top-right-square",
+                        "feature": 6,
+                        "name": "bottom-left-square",
                         "reference": "o",
                         "relation": "==",
                         "true": {
@@ -293,29 +268,55 @@
                         }
                     }
                 },
-                "feature": 4,
-                "name": "middle-middle-square",
+                "feature": 1,
+                "name": "top-middle-square",
                 "reference": "o",
                 "relation": "==",
                 "true": {
                     "false": {
                         "complexity": 0.00800000037997961,
-                        "loss": 0.0,
+                        "loss": 0.004175365436822176,
                         "name": "Class",
-                        "prediction": 0
+                        "prediction": 1
                     },
-                    "feature": 8,
-                    "name": "bottom-right-square",
-                    "reference": "x",
+                    "feature": 2,
+                    "name": "top-right-square",
+                    "reference": "o",
                     "relation": "==",
                     "true": {
                         "complexity": 0.00800000037997961,
-                        "loss": 0.015657620504498482,
+                        "loss": 0.0,
                         "name": "Class",
-                        "prediction": 1
+                        "prediction": 0
                     }
+                }
+            },
+            "feature": 4,
+            "name": "middle-middle-square",
+            "reference": "o",
+            "relation": "==",
+            "true": {
+                "false": {
+                    "complexity": 0.00800000037997961,
+                    "loss": 0.0,
+                    "name": "Class",
+                    "prediction": 0
+                },
+                "feature": 8,
+                "name": "bottom-right-square",
+                "reference": "x",
+                "relation": "==",
+                "true": {
+                    "complexity": 0.00800000037997961,
+                    "loss": 0.015657620504498482,
+                    "name": "Class",
+                    "prediction": 1
                 }
             }
         }
-    ]
+    ],
+    "feature": 0,
+    "name": "top-left-square",
+    "reference": "o",
+    "relation": "=="
 }
