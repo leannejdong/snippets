@@ -1,0 +1,236 @@
+[
+  {
+    "false": {
+      "false": {
+        "false": {
+          "complexity": 0.00800000037997961,
+          "loss": 0.0,
+          "name": "Class",
+          "prediction": 1
+        },
+        "feature": 8,
+        "name": "bottom-right-square",
+        "reference": "o",
+        "relation": "==",
+        "true": {
+          "false": {
+            "false": {
+              "complexity": 0.00800000037997961,
+              "loss": 0.0,
+              "name": "Class",
+              "prediction": 1
+            },
+            "feature": 6,
+            "name": "bottom-left-square",
+            "reference": "o",
+            "relation": "==",
+            "true": {
+              "false": {
+                "complexity": 0.00800000037997961,
+                "loss": 0.002087682718411088,
+                "name": "Class",
+                "prediction": 1
+              },
+              "feature": 7,
+              "name": "bottom-middle-square",
+              "reference": "o",
+              "relation": "==",
+              "true": {
+                "complexity": 0.00800000037997961,
+                "loss": 0.0,
+                "name": "Class",
+                "prediction": 0
+              }
+            }
+          },
+          "feature": 2,
+          "name": "top-right-square",
+          "reference": "o",
+          "relation": "==",
+          "true": {
+            "false": {
+              "complexity": 0.00800000037997961,
+              "loss": 0.005219206679612398,
+              "name": "Class",
+              "prediction": 1
+            },
+            "feature": 5,
+            "name": "middle-right-square",
+            "reference": "o",
+            "relation": "==",
+            "true": {
+              "complexity": 0.00800000037997961,
+              "loss": 0.0,
+              "name": "Class",
+              "prediction": 0
+            }
+          }
+        }
+      },
+      "feature": 4,
+      "name": "middle-middle-square",
+      "reference": "o",
+      "relation": "==",
+      "true": {
+        "false": {
+          "false": {
+            "false": {
+              "complexity": 0.00800000037997961,
+              "loss": 0.003131524194031954,
+              "name": "Class",
+              "prediction": 1
+            },
+            "feature": 3,
+            "name": "middle-left-square",
+            "reference": "o",
+            "relation": "==",
+            "true": {
+              "false": {
+                "complexity": 0.00800000037997961,
+                "loss": 0.0,
+                "name": "Class",
+                "prediction": 1
+              },
+              "feature": 5,
+              "name": "middle-right-square",
+              "reference": "o",
+              "relation": "==",
+              "true": {
+                "complexity": 0.00800000037997961,
+                "loss": 0.0,
+                "name": "Class",
+                "prediction": 0
+              }
+            }
+          },
+          "feature": 1,
+          "name": "top-middle-square",
+          "reference": "o",
+          "relation": "==",
+          "true": {
+            "false": {
+              "complexity": 0.00800000037997961,
+              "loss": 0.006263048388063908,
+              "name": "Class",
+              "prediction": 1
+            },
+            "feature": 7,
+            "name": "bottom-middle-square",
+            "reference": "o",
+            "relation": "==",
+            "true": {
+              "complexity": 0.00800000037997961,
+              "loss": 0.0,
+              "name": "Class",
+              "prediction": 0
+            }
+          }
+        },
+        "feature": 2,
+        "name": "top-right-square",
+        "reference": "o",
+        "relation": "==",
+        "true": {
+          "false": {
+            "complexity": 0.00800000037997961,
+            "loss": 0.0,
+            "name": "Class",
+            "prediction": 0
+          },
+          "feature": 6,
+          "name": "bottom-left-square",
+          "reference": "x",
+          "relation": "==",
+          "true": {
+            "complexity": 0.00800000037997961,
+            "loss": 0.008350730873644352,
+            "name": "Class",
+            "prediction": 1
+          }
+        }
+      }
+    },
+    "feature": 0,
+    "name": "top-left-square",
+    "reference": "o",
+    "relation": "==",
+    "true": {
+      "false": {
+        "false": {
+          "false": {
+            "complexity": 0.00800000037997961,
+            "loss": 0.008350730873644352,
+            "name": "Class",
+            "prediction": 1
+          },
+          "feature": 3,
+          "name": "middle-left-square",
+          "reference": "o",
+          "relation": "==",
+          "true": {
+            "false": {
+              "complexity": 0.00800000037997961,
+              "loss": 0.001043841359205544,
+              "name": "Class",
+              "prediction": 1
+            },
+            "feature": 6,
+            "name": "bottom-left-square",
+            "reference": "o",
+            "relation": "==",
+            "true": {
+              "complexity": 0.00800000037997961,
+              "loss": 0.0,
+              "name": "Class",
+              "prediction": 0
+            }
+          }
+        },
+        "feature": 1,
+        "name": "top-middle-square",
+        "reference": "o",
+        "relation": "==",
+        "true": {
+          "false": {
+            "complexity": 0.00800000037997961,
+            "loss": 0.004175365436822176,
+            "name": "Class",
+            "prediction": 1
+          },
+          "feature": 2,
+          "name": "top-right-square",
+          "reference": "o",
+          "relation": "==",
+          "true": {
+            "complexity": 0.00800000037997961,
+            "loss": 0.0,
+            "name": "Class",
+            "prediction": 0
+          }
+        }
+      },
+      "feature": 4,
+      "name": "middle-middle-square",
+      "reference": "o",
+      "relation": "==",
+      "true": {
+        "false": {
+          "complexity": 0.00800000037997961,
+          "loss": 0.0,
+          "name": "Class",
+          "prediction": 0
+        },
+        "feature": 8,
+        "name": "bottom-right-square",
+        "reference": "x",
+        "relation": "==",
+        "true": {
+          "complexity": 0.00800000037997961,
+          "loss": 0.015657620504498482,
+          "name": "Class",
+          "prediction": 1
+        }
+      }
+    }
+  }
+]

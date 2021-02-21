@@ -2,30 +2,30 @@
     {
         "false": {
             "false": {
-                "complexity": 0.00800000037997961,
-                "loss": 0.07653909921646118,
+                "complexity": 0.009999999776482582,
+                "loss": 0.09650582075119019,
                 "name": "class",
                 "prediction": 0
             },
-            "feature": 5,
-            "name": "a6",
+            "feature": 1,
+            "name": "a2",
             "reference": 2,
             "relation": ">=",
             "true": {
                 "false": {
+                    "complexity": 0.009999999776482582,
+                    "loss": 0.041597336530685425,
+                    "name": "class",
+                    "prediction": 0
+                },
+                "feature": 5,
+                "name": "a6",
+                "reference": 2,
+                "relation": ">=",
+                "true": {
                     "false": {
-                        "complexity": 0.00800000037997961,
-                        "loss": 0.029950082302093506,
-                        "name": "class",
-                        "prediction": 0
-                    },
-                    "feature": 1,
-                    "name": "a2",
-                    "reference": 2,
-                    "relation": ">=",
-                    "true": {
                         "false": {
-                            "complexity": 0.00800000037997961,
+                            "complexity": 0.009999999776482582,
                             "loss": 0.011647254228591919,
                             "name": "class",
                             "prediction": 0
@@ -36,7 +36,7 @@
                         "relation": ">=",
                         "true": {
                             "false": {
-                                "complexity": 0.00800000037997961,
+                                "complexity": 0.009999999776482582,
                                 "loss": 0.0,
                                 "name": "class",
                                 "prediction": 0
@@ -46,56 +46,20 @@
                             "reference": 2,
                             "relation": ">=",
                             "true": {
-                                "complexity": 0.00800000037997961,
-                                "loss": 0.0,
-                                "name": "class",
-                                "prediction": 1
-                            }
-                        }
-                    }
-                },
-                "feature": 3,
-                "name": "a4",
-                "reference": 2,
-                "relation": "==",
-                "true": {
-                    "false": {
-                        "false": {
-                            "complexity": 0.00800000037997961,
-                            "loss": 0.004991680383682251,
-                            "name": "class",
-                            "prediction": 0
-                        },
-                        "feature": 1,
-                        "name": "a2",
-                        "reference": 2,
-                        "relation": ">=",
-                        "true": {
-                            "false": {
-                                "complexity": 0.00800000037997961,
-                                "loss": 0.0,
-                                "name": "class",
-                                "prediction": 0
-                            },
-                            "feature": 2,
-                            "name": "a3",
-                            "reference": 2,
-                            "relation": ">=",
-                            "true": {
-                                "complexity": 0.00800000037997961,
+                                "complexity": 0.009999999776482582,
                                 "loss": 0.0,
                                 "name": "class",
                                 "prediction": 1
                             }
                         }
                     },
-                    "feature": 4,
-                    "name": "a5",
+                    "feature": 3,
+                    "name": "a4",
                     "reference": 2,
-                    "relation": ">=",
+                    "relation": "==",
                     "true": {
-                        "complexity": 0.00800000037997961,
-                        "loss": 0.06655573844909668,
+                        "complexity": 0.009999999776482582,
+                        "loss": 0.0682196319103241,
                         "name": "class",
                         "prediction": 1
                     }
@@ -108,7 +72,7 @@
         "relation": "==",
         "true": {
             "false": {
-                "complexity": 0.00800000037997961,
+                "complexity": 0.009999999776482582,
                 "loss": 0.024958401918411255,
                 "name": "class",
                 "prediction": 1
@@ -120,29 +84,29 @@
             "true": {
                 "false": {
                     "false": {
-                        "complexity": 0.00800000037997961,
+                        "complexity": 0.009999999776482582,
                         "loss": 0.0,
                         "name": "class",
                         "prediction": 1
                     },
-                    "feature": 1,
-                    "name": "a2",
+                    "feature": 4,
+                    "name": "a5",
                     "reference": 2,
                     "relation": ">=",
                     "true": {
                         "false": {
-                            "complexity": 0.00800000037997961,
+                            "complexity": 0.009999999776482582,
                             "loss": 0.0,
                             "name": "class",
                             "prediction": 1
                         },
-                        "feature": 4,
-                        "name": "a5",
+                        "feature": 1,
+                        "name": "a2",
                         "reference": 2,
                         "relation": ">=",
                         "true": {
                             "false": {
-                                "complexity": 0.00800000037997961,
+                                "complexity": 0.009999999776482582,
                                 "loss": 0.0,
                                 "name": "class",
                                 "prediction": 1
@@ -152,7 +116,7 @@
                             "reference": 2,
                             "relation": ">=",
                             "true": {
-                                "complexity": 0.00800000037997961,
+                                "complexity": 0.009999999776482582,
                                 "loss": 0.0,
                                 "name": "class",
                                 "prediction": 0
@@ -165,7 +129,7 @@
                 "reference": 2,
                 "relation": "==",
                 "true": {
-                    "complexity": 0.00800000037997961,
+                    "complexity": 0.009999999776482582,
                     "loss": 0.029950082302093506,
                     "name": "class",
                     "prediction": 0
@@ -180,7 +144,7 @@
             "key": "true",
             "value": {
                 "false": {
-                    "complexity": 0.00800000037997961,
+                    "complexity": 0.009999999776482582,
                     "loss": 0.024958401918411255,
                     "name": "class",
                     "prediction": 1
@@ -192,29 +156,29 @@
                 "true": {
                     "false": {
                         "false": {
-                            "complexity": 0.00800000037997961,
+                            "complexity": 0.009999999776482582,
                             "loss": 0.0,
                             "name": "class",
                             "prediction": 1
                         },
-                        "feature": 1,
-                        "name": "a2",
+                        "feature": 4,
+                        "name": "a5",
                         "reference": 2,
                         "relation": ">=",
                         "true": {
                             "false": {
-                                "complexity": 0.00800000037997961,
+                                "complexity": 0.009999999776482582,
                                 "loss": 0.0,
                                 "name": "class",
                                 "prediction": 1
                             },
-                            "feature": 4,
-                            "name": "a5",
+                            "feature": 1,
+                            "name": "a2",
                             "reference": 2,
                             "relation": ">=",
                             "true": {
                                 "false": {
-                                    "complexity": 0.00800000037997961,
+                                    "complexity": 0.009999999776482582,
                                     "loss": 0.0,
                                     "name": "class",
                                     "prediction": 1
@@ -224,7 +188,7 @@
                                 "reference": 2,
                                 "relation": ">=",
                                 "true": {
-                                    "complexity": 0.00800000037997961,
+                                    "complexity": 0.009999999776482582,
                                     "loss": 0.0,
                                     "name": "class",
                                     "prediction": 0
@@ -237,7 +201,7 @@
                     "reference": 2,
                     "relation": "==",
                     "true": {
-                        "complexity": 0.00800000037997961,
+                        "complexity": 0.009999999776482582,
                         "loss": 0.029950082302093506,
                         "name": "class",
                         "prediction": 0
