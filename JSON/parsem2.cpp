@@ -55,7 +55,7 @@ auto restructure(const auto &inputs){
 int main(){
     std::ifstream source("m2.json");
     auto inputs = nlohmann::json::parse(source);
-    std::ofstream os("m22.json");
+    std::ofstream os("outputs/m21.json");
     std::string inputs_str = inputs.dump(4);
     os << inputs_str << "\n";
    // std::cout << inputs.dump(4) << std::endl;

@@ -73,7 +73,7 @@ int main(){
 //    std::ifstream source("tic-tac-dat.json");
 //    std::ifstream source("m2.json");
      auto inputs = nlohmann::json::parse(source);
-     std::ofstream os("n-ary-model.json");
+     std::ofstream os("outputs/n-ary-model.json");
    // std::ofstream os("ttdo.json");
    // std::ofstream os("m22.json");
     auto outputs = convert(inputs);

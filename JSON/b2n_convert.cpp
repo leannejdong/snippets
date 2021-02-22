@@ -41,7 +41,7 @@ int main(){
    // std::ofstream os("n-ary-model.json");
    // std::ofstream os("ttdo.json");
 //   std::ofstream os("/home/leanne/Dev/snippets/JSON/outputs/m22.json");
-   std::ofstream os("m22.json");
+   std::ofstream os("outputs/m22.json");
    auto outputs = convert(inputs);
     std::string inputs_str = inputs.dump(4);
     os << inputs_str << "\n";

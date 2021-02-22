@@ -21,6 +21,6 @@ int main()
     i >> j;
 
     // write to another file
-    std::ofstream o("m22.json");
+    std::ofstream o("outputs/m2DT.json");
     o << std::setw(4) << j << "\n";
 }
