@@ -32,4 +32,4 @@
 *.app
 
 #vim
-*.md.swp
+*.swp
