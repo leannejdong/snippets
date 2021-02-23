@@ -1,0 +1,4 @@
+local_time,temperature,wind_speed,lumination,pressure,acidity,humidity,precipitation_level,weather_category
+0000,96,0.3,0.5,22,7,0.8,15,medium_rain
+0000,96,0.3,0.5,22,7,0.8,5,light_rain
+0000,96,0.3,0.5,22,7,0.8,25,heavy_rain
