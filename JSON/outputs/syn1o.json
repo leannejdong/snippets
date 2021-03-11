@@ -1,0 +1,58 @@
+[
+    {
+        "false": {
+            "complexity": 9.999999747378752e-06,
+            "loss": 0.0,
+            "name": "y",
+            "prediction": 0
+        },
+        "feature": 0,
+        "name": "x",
+        "reference": 3,
+        "relation": ">=",
+        "true": {
+            "false": {
+                "complexity": 9.999999747378752e-06,
+                "loss": 0.0,
+                "name": "y",
+                "prediction": 1
+            },
+            "feature": 0,
+            "name": "x",
+            "reference": 7,
+            "relation": ">=",
+            "true": {
+                "complexity": 9.999999747378752e-06,
+                "loss": 0.0,
+                "name": "y",
+                "prediction": 0
+            }
+        }
+    }
+]
+{
+    "children": [
+        {
+            "false": {
+                "complexity": 9.999999747378752e-06,
+                "loss": 0.0,
+                "name": "y",
+                "prediction": 1
+            },
+            "feature": 0,
+            "name": "x",
+            "reference": 7,
+            "relation": ">=",
+            "true": {
+                "complexity": 9.999999747378752e-06,
+                "loss": 0.0,
+                "name": "y",
+                "prediction": 0
+            }
+        }
+    ],
+    "feature": 0,
+    "name": "x",
+    "reference": 3,
+    "relation": ">="
+}
