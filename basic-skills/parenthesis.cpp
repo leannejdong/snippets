@@ -49,10 +49,10 @@ bool validate(stack<char> &s, char input)
 
 int soln(string &S)
 {
-    int size = (int)S.size();
+    size_t size = S.size();// avoid cast by using type size_t for the size variable instead of using int
     stack<char> tmp;
 
-    for(int i = 0; i < size; i++)
+    for(size_t i = 0; i < size; ++i)
     {
         bool validate_result = validate(tmp, S[i]);
         std::cerr << "validate_result=" << validate_result << "\n";
