@@ -37,12 +37,14 @@ int main(){
 //    std::ifstream source("model.json");
 //    std::ifstream source("tic-tac-dat.json");
     std::ifstream source("m2.json");
+//   std::ifstream source("syn1.json");
    auto inputs = nlohmann::json::parse(source);
    // std::ofstream os("n-ary-model.json");
    // std::ofstream os("ttdo.json");
 //   std::ofstream os("/home/leanne/Dev/snippets/JSON/outputs/m22.json");
    std::ofstream os("outputs/m22.json");
-   auto outputs = convert(inputs);
+//  std::ofstream os("outputs/syn1o.json");
+  auto outputs = convert(inputs);
     std::string inputs_str = inputs.dump(4);
     os << inputs_str << "\n";
    // std::cout << inputs.dump(4) << std::endl;
