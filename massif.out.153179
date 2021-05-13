@@ -1,0 +1,65 @@
+desc: (none)
+cmd: ./test
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2194407
+mem_heap_B=1882
+mem_heap_extra_B=14
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2202056
+mem_heap_B=74586
+mem_heap_extra_B=22
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2324746
+mem_heap_B=74586
+mem_heap_extra_B=22
+mem_stacks_B=0
+heap_tree=peak
+n2: 74586 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x490CC19: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28)
+  n1: 72704 0x4011B89: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4011C90: call_init (dl-init.c:30)
+    n1: 72704 0x4011C90: _dl_init (dl-init.c:119)
+     n0: 72704 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 1882 0x4B6BA01: monstartup (gmon.c:153)
+  n1: 1882 0x109120: __gmon_start__ (in /home/leanne/Dev/snippets/test)
+   n1: 1882 0x4839015: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_massif-amd64-linux.so)
+    n1: 1882 0x1FFEFFFDEF: ???
+     n1: 1882 0x4011B4B: call_init.part.0 (dl-init.c:58)
+      n1: 1882 0x4011D05: call_init (dl-init.c:30)
+       n1: 1882 0x4011D05: _dl_init (dl-init.c:86)
+        n0: 1882 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=4
+#-----------
+time=2324746
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=2329118
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
