@@ -62,10 +62,12 @@ int main(){
     // Set the random number seed
     // srand(2);
     std::mt19937 random_engine(32);
+    std::uniform_int_distribution<> distrib(1, 6);
 
     // Insert 20 random integers
     for(int i = 0; i < 20; ++i){
-        ht.insert(rand() % 100);
+//        ht.insert(rand() % 100);
+        ht.insert(distrib(random_engine) % 100);          
     }
 
     // Print the state of the hash table
