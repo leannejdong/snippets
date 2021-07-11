@@ -102,7 +102,7 @@ auto create_reference_graph()
 	Graph<T> G(9);
 
 	std::map<unsigned, std::vector<std::pair<size_t, T>>> edges;
-	edges[1] = { {2, 2}, {5, 3} };
+	edges[1] = { {2, 2}, {5, 3} };// vertex, weight
 	edges[2] = { {1, 2}, {5, 5}, {4, 1} };
 	edges[3] = { {4, 2}, {7, 3} };
 	edges[4] = { {2, 1}, {3, 2}, {5, 2}, {6, 4}, {8, 5} };
