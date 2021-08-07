@@ -38,7 +38,6 @@ private:
 
 class Newton : public Iteration{
     public:
-  //  Newton(double epsilon, const std::function<double (double)> f, const std::function<double (double)> fPrime) : Iteration(epsilon), mf(f), mfPrime(fPrime) {}
     
     ~Newton() override = default;
 
@@ -51,9 +50,6 @@ class Newton : public Iteration{
     VectorXd solve(Eigen::VectorXd&x) override {
         resetNumberOfIterations();
      
-        VectorXd Fx = _F(x);
-        MatrixXd DF = _DF(x);
-   
         calculateX(x, epsilon(), _F, _DF );
         return x;
     }
