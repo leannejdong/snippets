@@ -1,3 +1,4 @@
+
 #include <random>
 #include <algorithm>
 #include <set>
@@ -16,14 +17,30 @@ std::set<int> make_sorted_random(const size_t num_elems)
 }
 
 int main()
-{
-  auto f1 = std::async(make_sorted_random, 1000000);
-  auto f2 = std::async(make_sorted_random, 1000000);
-  auto f3 = std::async(std::launch::deferred, make_sorted_random, 1000000);// save us effort if the computer got insufficient core
-  auto f4 = std::async(std::launch::deferred, make_sorted_random, 1000000);
-  auto f5 = std::async(std::launch::deferred, make_sorted_random, 1000000);
+{ /*
+     leanne@tensorbook:~/Dev/snippets/concurrency$ /usr/bin/time ./future2
+     632444 632565 632060
+     4.17user 0.25system 0:02.91elapsed 151%CPU (0avgtext+0avgdata 92800maxresident)k
+     0inputs+0outputs (0major+22389minor)pagefaults 0swaps
 
-  std::cout << f1.get().size() << ' ' << f2.get().size() 
-  << ' ' << f3.get().size() << "\n";
+  */
+  auto f1 = std::async(std::launch::async, make_sorted_random, 1000000);
+  auto f2 = std::async(std::launch::async, make_sorted_random, 1000000);
+  auto f3 = std::async(std::launch::deferred, make_sorted_random, 1000000);// save us effort if the computer got insufficient core
+  //auto f4 = std::async(std::launch::deferred, make_sorted_random, 1000000);// deferred means lazy evaluation, it only got evaluated when it is called
+  //auto f5 = std::async(std::launch::deferred, make_sorted_random, 1000000);
+  std::cout << f1.get().size() << ' ' << f2.get().size() << ' ' << f3.get().size() <<'\n';
+
+  ////std::cout << f3.get().size() << ' ' << f4.get().size() << ' ' << f5.get().size() << "\n";
+  //  std::cout << std::async(make_sorted_random, 1000000).get().size() << ' ' << std::async(make_sorted_random, 1000000).get().size() << "\n";
 
 }
+/*  
+  std::cout << std::async(make_sorted_random, 1000000).get().size() << ' ' << std::async(make_sorted_random, 1000000).get().size() << "\n";
+ *$ /usr/bin/time ./future2
+632106 631810
+2.24user 0.03system 0:02.28elapsed 99%CPU (0avgtext+0avgdata 63088maxresident)k
+0inputs+0outputs (0major+14961minor)pagefaults 0swaps
+Here we are using only 1 core even we were expecting it to use the available cores.
+std::async can choose to run in the background asynchronously or in a deferred manner
+ */
